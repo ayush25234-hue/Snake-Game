@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00f3ff;
+  --color-neon-magenta: #ff00ff;
+  --color-neon-green: #39ff14;
+  --color-bg-dark: #050508;
+  --color-panel-bg: rgba(20, 20, 30, 0.8);
+  --color-text-dim: #8e9299;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-sans antialiased overflow-hidden;
+  }
+}
+
+.font-mono {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.neon-glow-cyan {
+  text-shadow: 0 0 10px var(--color-neon-cyan);
+}
+
+.neon-glow-magenta {
+  text-shadow: 0 0 10px var(--color-neon-magenta);
+}
+
+.neon-glow-green {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.neon-border-cyan {
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.neon-border-magenta {
+  border: 1px solid rgba(255, 0, 255, 0.2);
+}
+
+.neon-border-green {
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-neon-cyan);
+  border-radius: 10px;
+}
